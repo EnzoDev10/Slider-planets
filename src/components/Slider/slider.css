@@ -1,0 +1,47 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.slider-root {
+    /* No Tailwind classes on root, but you can add general slider styles here if needed */
+    display: flex;
+}
+
+.slider-container {
+    display: flex;
+    aspect-ratio: 3 / 4;
+    width: 80vw;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .slider-container {
+        width: 30vw;
+    }
+}
+
+.slider-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    outline: 1px solid #27272a; /* gray-800 */
+}
+
+.slider-outline {
+    height: 100%;
+    width: 100%;
+    outline: 1px solid #52525b; /* gray-600 */
+}
+
+.slider-index {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    z-index: 10;
+}
