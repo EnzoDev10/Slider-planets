@@ -5,6 +5,8 @@ import gsap from "gsap";
 
 import "./slider.css";
 
+import { StepBack, StepForward } from "lucide-react";
+
 function useSmooothy(config: Partial<CoreConfig> = {}) {
     const sliderRef = useRef<HTMLElement | null>(null);
     const [slider, setSlider] = useState<Core | null>(null);
@@ -35,6 +37,7 @@ export const ReactSlider = () => {
 
     function goNext() {
         slider?.goToNext();
+        console.log(slider?.currentSlide);
     }
 
     function goPrev() {
@@ -42,6 +45,9 @@ export const ReactSlider = () => {
     }
 
     const slides = Array.from({ length: 10 }, (_, i) => i);
+
+    const dots = Array.from({ length: slides.length }, (_, i) => i);
+
     return (
         <section>
             <div ref={ref} className='slider-root'>
@@ -55,8 +61,15 @@ export const ReactSlider = () => {
                 ))}
             </div>
             <div className='btns-container'>
-                <button onClick={() => goPrev()}>Anterior</button>
-                <button onClick={() => goNext()}>Siguiente</button>
+                <button onClick={() => goPrev()}>
+                    <StepBack />
+                </button>
+                {dots.map((_, i) => (
+                    <button onClick={() => slider?.goToIndex(i)}>{i}</button>
+                ))}
+                <button onClick={() => goNext()}>
+                    <StepForward />
+                </button>
             </div>
         </section>
     );

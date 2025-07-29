@@ -1,14 +1,16 @@
 import "./App.css";
 
-import { ReactSlider, StarsBg } from "./components";
+// import { ReactSlider, StarsBg } from "./components";
+import { TestModel, ModelsContainer, Cube } from "./components";
 
 function App() {
     return (
         <>
-            <div>
-                <StarsBg />
-                <ReactSlider />
-            </div>
+            {/*<StarsBg />
+            <ReactSlider /> */}
+            <ModelsContainer>
+                <Cube />
+            </ModelsContainer>
         </>
     );
 }

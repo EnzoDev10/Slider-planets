@@ -10,10 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^10.6.1",
+    "@react-three/fiber": "^9.3.0",
+    "@types/three": "^0.178.1",
     "gsap": "^3.13.0",
+    "lucide-react": "^0.526.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "smooothy": "^0.0.25"
+    "smooothy": "^0.0.25",
+    "three": "^0.178.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
