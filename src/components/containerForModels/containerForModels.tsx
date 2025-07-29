@@ -1,14 +1,8 @@
 import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Html, useProgress } from "@react-three/drei";
 
-import "./3dStyles.css";
 import { Suspense, type PropsWithChildren } from "react";
-
-import {
-    Environment,
-    OrbitControls,
-    Html,
-    useProgress,
-} from "@react-three/drei";
+import "./3dStyles.css";
 
 function Loader() {
     const { progress } = useProgress();
@@ -23,7 +17,6 @@ export const ModelsContainer = ({ children }: PropsWithChildren) => {
                 <Suspense fallback={<Loader />}>
                     {children}
                     <OrbitControls />
-                    <Environment preset='sunset' background />
                 </Suspense>
             </Canvas>
         </div>
