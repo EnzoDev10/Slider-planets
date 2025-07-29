@@ -10,14 +10,12 @@ export const Cube = () => {
 
     return (
         <>
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.3} />
             <directionalLight />
-            <mesh castShadow receiveShadow>
+            <mesh>
                 <boxGeometry />
-                <meshStandardMaterial {...textures} />
+                <meshStandardMaterial displacementScale={0} {...textures} />
             </mesh>
-            <ambientLight args={[0xff0000]} intensity={0.1} />
-            <directionalLight position={[0, 0, 5]} intensity={0.6} />
         </>
     );
 };
