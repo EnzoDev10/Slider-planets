@@ -1,3 +1,4 @@
+export { Sphere } from "./Sphere/Sphere";
 export { Cube } from "./Cube/Cube";
 export { TestModel } from "./testModel/testModel";
 export { ModelsContainer } from "./containerForModels/containerForModels";
