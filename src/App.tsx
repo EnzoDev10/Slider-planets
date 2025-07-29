@@ -1,7 +1,7 @@
 import "./App.css";
 
 // import { ReactSlider, StarsBg } from "./components";
-import { TestModel, ModelsContainer, Cube, Sphere } from "./components";
+import { ModelsContainer, Cube, Sphere } from "./components";
 
 function App() {
     return (
@@ -9,7 +9,7 @@ function App() {
             {/*<StarsBg />
             <ReactSlider /> */}
             <ModelsContainer>
-                <Sphere />
+                <Cube />
             </ModelsContainer>
         </>
     );
